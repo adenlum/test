@@ -10,10 +10,9 @@ pipeline {
             }
         }
 
-
-        stage('Test') {
+        stage('Docker Build') {
             steps {
-                sh 'ls -la'
+                sh 'docker build -t cnas-test:v1 .'
             }
         }
 
